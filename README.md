@@ -22,6 +22,7 @@ What I Did
 Vulnerabilities Found
 ---------------------
 1. Hardcoded Credentials
+
 Issue: Username and password are written directly in the code.
 
 Risk: Anyone who accesses the source code can see the credentials.
@@ -29,6 +30,7 @@ Risk: Anyone who accesses the source code can see the credentials.
 Solution: Store credentials securely using a database or environment variables, and store passwords as hashes.
 
 2. Plain Text Password
+
 Issue: Passwords are stored or compared directly.
 
 Risk: If the code is exposed, attackers can read the password.
@@ -36,6 +38,7 @@ Risk: If the code is exposed, attackers can read the password.
 Solution: Use SHA-256 or bcrypt to hash passwords before storing or comparing them.
 
 3. Unlimited Login Attempts
+
 Issue: Users can try unlimited passwords.
 
 Risk: Makes brute-force attacks possible.
@@ -43,6 +46,7 @@ Risk: Makes brute-force attacks possible.
 Solution: Limit login attempts to 3 and lock the account after repeated failures.
 
 4. No Input Validation
+
 Issue: User input is accepted without validation.
 
 Risk: May lead to security problems in larger applications.
